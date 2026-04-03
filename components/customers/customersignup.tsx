@@ -443,7 +443,7 @@ export default function LoginPage() {
                                                 ? 'bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-slate-950 text-white shadow-lg hover:shadow-xl' 
                                                 : 'bg-slate-100 text-slate-400 cursor-not-allowed'
                                         }`}
-                                        disabled={!pinsMatch || isLoading || phoneError || isCheckingPhone}
+                                        disabled={!pinsMatch || isLoading || !!phoneError || isCheckingPhone}
                                     >
                                         {isLoading ? 'Creating account...' : isCheckingPhone ? 'Checking phone...' : 'Create Account'}
                                     </Button>
